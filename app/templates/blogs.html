@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="section container">
+    <h2>Posts </h2>
+    <div class="row">
+
+
+        <!-- Check if any posts have been fetched from the db -->
+        <!-- If yes Loop through and display -->
+        <!-- If no show a message that not posts exist -->
+
+        {% if posts %}
+
+        {% for post in posts %}
+        <!-- One Post -->
+        <div class="col s4">
+            <div class="card">
+                <div class="card-image">
+                    <img src="{{ url_for('static', filename='img/is_php_dead.jpg')}}">
+                    <span class="card-title">{{ post.title }}</span>
+                </div>
+                <div class="card-content">
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum hic maiores ad assumenda
+                        sapiente, aperiam provident dicta accusantium, maxime iusto optio amet soluta, id eius
+                        error rerum deleniti magnam voluptate?
+                    </p>
+                </div>
+                <div class="card-action">
+                    <a class="center-align" href="#">Read Blog</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+        {% else %}
+
+        <p>You do not have any posts yet</p>
+
+        {% endif %}
+
+
+
+
+
+
+    </div>
+</div>
+{% endblock %}

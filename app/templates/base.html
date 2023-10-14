@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shorcut-icon" href="/img/favicon.ico" type="image/x-icon">
+
+
+    <title>Crope Blog</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <!-- Materialize Styles -->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Add material icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</head>
+
+<body>
+    <nav class="black">
+        <div class="nav-wrapper container">
+            <a href="{{ url_for('index') }}" class="brand-logo">Crope</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="{{ url_for('blogs') }}">Blogs</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+
+        {%block content%}
+        {%endblock%}
+
+    </main>
+    <footer class="page-footer black">
+        <div class="container">
+            © 2021 Copyright Bellevivre
+            <a class="right grey-text text-lighten-4" href="#">Admin</a>
+        </div>
+    </footer>
+
+    <!-- <script src="js/my.js"></script> -->
+</body>
+
+</html>

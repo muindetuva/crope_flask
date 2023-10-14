@@ -1,0 +1,16 @@
+Users
+ - emails
+ - passwords
+ - names
+ - username
+ -----------------
+ - timestamps
+
+BlogPosts
+ - title
+ - description
+ - Content
+ - image (ish ish)
+ - timestamps
+ -------------------
+ - tags
